@@ -21,6 +21,7 @@
 		331D43F52330B58B00DC14A0 /* AlbumTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331D43F32330B58B00DC14A0 /* AlbumTableCell.xib */; };
 		331D43F72330B8B600DC14A0 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43F62330B8B600DC14A0 /* Album.swift */; };
 		331D43F92330BA3100DC14A0 /* ItunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43F82330BA3100DC14A0 /* ItunesService.swift */; };
+		331D43FD2330D1FD00DC14A0 /* ItunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		331D43F32330B58B00DC14A0 /* AlbumTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableCell.xib; sourceTree = "<group>"; };
 		331D43F62330B8B600DC14A0 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		331D43F82330BA3100DC14A0 /* ItunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesService.swift; sourceTree = "<group>"; };
+		331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				331D43F82330BA3100DC14A0 /* ItunesService.swift */,
+				331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				331D43C32330AEC800DC14A0 /* MainViewController.swift in Sources */,
 				331D43ED2330B1C700DC14A0 /* GridViewController.swift in Sources */,
+				331D43FD2330D1FD00DC14A0 /* ItunesAPI.swift in Sources */,
 				331D43C12330AEC800DC14A0 /* AppDelegate.swift in Sources */,
 				331D43F92330BA3100DC14A0 /* ItunesService.swift in Sources */,
 				331D43F42330B58B00DC14A0 /* AlbumTableCell.swift in Sources */,

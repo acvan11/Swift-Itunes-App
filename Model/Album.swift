@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AlbumResPonse: Decodable {
+struct AlbumResponse: Decodable {
     let albums: [Album]
     private enum CodingKeys: String, CodingKey {
         case albums = "results"

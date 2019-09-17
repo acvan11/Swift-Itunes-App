@@ -16,6 +16,29 @@ final class ItunesService {
     private init() {}
     
     func getAlbums(for search: String, completion: @escaping AlbumHandler) {
+        guard let url = ItunesAPI(search: search).getUrl else {
+            completion([])
+            return
+        }
         
+        URLSession.shared.dataTask(with: url) { (dat, _, err) in
+            if let error = err {
+                print("Bad Task: \(error.localizedDescription)")
+                completion([])
+                return
+            }
+            
+            if let data = dat {
+                do {
+                    let albumResponse = try JSONDecoder().decode(AlbumResponse.self, from: data)
+                    let albums = albumResponse.albums
+                    completion(albums)
+                } catch let myError {
+                    print("Couldn't Decode Album: \(myError.localizedDescription)")
+                    completion([])
+                    return
+                }
+            }
+        }
     }
 }
