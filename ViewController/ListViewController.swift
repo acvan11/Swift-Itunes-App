@@ -12,6 +12,14 @@ class ListViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
     
+    var viewModel: ViewModel! {
+        didSet {
+            DispatchQueue.main.async {
+                self.listTableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupList()
@@ -20,6 +28,12 @@ class ListViewController: UIViewController {
     private func setupList() {
         //you must register XIB to table view
         listTableView.register(UINib(nibName: AlbumTableCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: AlbumTableCell.identifier)
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name.AlbumNotification, object: nil, queue: .main){ note in
+            guard let userInfo = note.userInfo as? [String:ViewModel] else { return }
+            
+            self.viewModel = userInfo["ViewModel"]!
+        }
     }
     
 

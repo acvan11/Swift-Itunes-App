@@ -12,10 +12,25 @@ class GridViewController: UIViewController {
 
     @IBOutlet weak var gridCollectionView: UICollectionView!
     
+    //implicit unwrap - dependency injection
+    var viewModel: ViewModel! {
+        didSet {
+            DispatchQueue.main.async {
+                self.gridCollectionView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    private func setupGrid() {
+        NotificationCenter.default.addObserver(forName: Notification.Name.AlbumNotification, object: nil, queue: .main) { note in
+            
+            
+        }
     }
     
 
@@ -26,7 +41,7 @@ class GridViewController: UIViewController {
 extension GridViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return viewModel.albums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

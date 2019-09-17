@@ -22,6 +22,8 @@
 		331D43F72330B8B600DC14A0 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43F62330B8B600DC14A0 /* Album.swift */; };
 		331D43F92330BA3100DC14A0 /* ItunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43F82330BA3100DC14A0 /* ItunesService.swift */; };
 		331D43FD2330D1FD00DC14A0 /* ItunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */; };
+		331D43FF2330E43400DC14A0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43FE2330E43400DC14A0 /* ViewModel.swift */; };
+		331D44032330E65700DC14A0 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D44022330E65700DC14A0 /* Notification+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		331D43F62330B8B600DC14A0 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		331D43F82330BA3100DC14A0 /* ItunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesService.swift; sourceTree = "<group>"; };
 		331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesAPI.swift; sourceTree = "<group>"; };
+		331D43FE2330E43400DC14A0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		331D44022330E65700DC14A0 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,7 @@
 				331D43E62330B0E700DC14A0 /* Storyboard */,
 				331D43E52330B0DD00DC14A0 /* ViewController */,
 				331D43E42330B0D400DC14A0 /* Service */,
-				331D43E32330B0C700DC14A0 /* Extension */,
+				331D44012330E63D00DC14A0 /* Extension */,
 				331D43BF2330AEC800DC14A0 /* Practice_iTunesApp */,
 				331D43D72330AEC900DC14A0 /* Practice_iTunesAppTests */,
 				331D43BE2330AEC800DC14A0 /* Products */,
@@ -118,13 +122,6 @@
 			path = Practice_iTunesAppTests;
 			sourceTree = "<group>";
 		};
-		331D43E32330B0C700DC14A0 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		331D43E42330B0D400DC14A0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +153,7 @@
 		331D43E72330B0F000DC14A0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				331D43FE2330E43400DC14A0 /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,6 +175,14 @@
 				331D43F62330B8B600DC14A0 /* Album.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		331D44012330E63D00DC14A0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				331D44022330E65700DC14A0 /* Notification+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +289,9 @@
 			files = (
 				331D43C32330AEC800DC14A0 /* MainViewController.swift in Sources */,
 				331D43ED2330B1C700DC14A0 /* GridViewController.swift in Sources */,
+				331D44032330E65700DC14A0 /* Notification+Extension.swift in Sources */,
 				331D43FD2330D1FD00DC14A0 /* ItunesAPI.swift in Sources */,
+				331D43FF2330E43400DC14A0 /* ViewModel.swift in Sources */,
 				331D43C12330AEC800DC14A0 /* AppDelegate.swift in Sources */,
 				331D43F92330BA3100DC14A0 /* ItunesService.swift in Sources */,
 				331D43F42330B58B00DC14A0 /* AlbumTableCell.swift in Sources */,

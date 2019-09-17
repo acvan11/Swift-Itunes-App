@@ -6,7 +6,7 @@
 //  Copyright © 2019 Sky. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct AlbumResponse: Decodable {
     let albums: [Album]
@@ -34,5 +34,21 @@ class Album: Decodable {
         case url = "collectionViewUrl"
         case genre = "primaryGenreName"
         case copyright, releaseDate, trackCount
+    }
+    
+    func getImage(completion: @escaping (UIImage?) -> Void) {
+        
+        guard let url = URL(string: image) else {
+            completion(nil)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (dat, _, _) in
+            if let data = dat {
+                DispatchQueue.main.async {
+                    completion(UIImage(data: data))
+                }
+            }
+        }.resume()
     }
 }
