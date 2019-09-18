@@ -12,17 +12,16 @@ class ListViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
     
-    var viewModel: ViewModel! {
+    var viewModel = ViewModel(){
         didSet {
-            DispatchQueue.main.async {
-                self.listTableView.reloadData()
-            }
+            self.listTableView.reloadData()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupList()
+//        listTableView.backgroundColor = .red
     }
     
     private func setupList() {
@@ -33,6 +32,7 @@ class ListViewController: UIViewController {
             guard let userInfo = note.userInfo as? [String:ViewModel] else { return }
             
             self.viewModel = userInfo["ViewModel"]!
+
         }
     }
     
@@ -43,12 +43,14 @@ class ListViewController: UIViewController {
 extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+    
+        return viewModel.albums.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AlbumTableCell.identifier, for: indexPath) as! AlbumTableCell
-        //TODO: Configurate Album Cell
+        let album = viewModel.albums[indexPath.row]
+        cell.album = album
         return cell
     }
 }

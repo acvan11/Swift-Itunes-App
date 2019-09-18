@@ -20,7 +20,6 @@ class AlbumTableCell: UITableViewCell {
         didSet {
             albumMainLabel.text = album.title
             albumSubLabel.text = album.artist
-            
             album.getImage{ [weak self] img in
                 self?.albumImage.image = img
             }

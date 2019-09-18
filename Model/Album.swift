@@ -19,7 +19,7 @@ class Album: Decodable {
     let artist: String
     let image: String
     let title: String
-    let price: Double
+    let price: Double?
     let url: String
     let copyright: String
     let genre: String

@@ -18,7 +18,7 @@ struct ItunesAPI {
     }
 
     
-    let base = "https://itunes.apple.com/search?term"
+    let base = "https://itunes.apple.com/search?term="
     let album = "&entity=album"
     
     var getUrl: URL? {

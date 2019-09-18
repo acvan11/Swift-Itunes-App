@@ -29,9 +29,12 @@ final class ItunesService {
             }
             
             if let data = dat {
+                
                 do {
                     let albumResponse = try JSONDecoder().decode(AlbumResponse.self, from: data)
                     let albums = albumResponse.albums
+                    print("okay")
+                    print(albums)
                     completion(albums)
                 } catch let myError {
                     print("Couldn't Decode Album: \(myError.localizedDescription)")
@@ -39,6 +42,6 @@ final class ItunesService {
                     return
                 }
             }
-        }
+        }.resume()
     }
 }
