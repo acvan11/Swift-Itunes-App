@@ -25,6 +25,8 @@ class ViewModel {
         }
     }
     
+    var tracks = [Track]()
+    
     
     func get(search: String) {
         
