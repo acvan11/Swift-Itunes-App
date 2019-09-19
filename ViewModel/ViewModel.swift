@@ -27,6 +27,7 @@ class ViewModel {
     
     var tracks = [Track]()
     
+    var currentAlbum: Album!
     
     func get(search: String) {
         
