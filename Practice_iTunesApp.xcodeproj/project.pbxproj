@@ -26,6 +26,9 @@
 		331D44032330E65700DC14A0 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D44022330E65700DC14A0 /* Notification+Extension.swift */; };
 		331D44052332F61A00DC14A0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D44042332F61A00DC14A0 /* CacheManager.swift */; };
 		331D440723330A7400DC14A0 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D440623330A7400DC14A0 /* Track.swift */; };
+		331D44092333225100DC14A0 /* TrackTableCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D44082333225100DC14A0 /* TrackTableCellOne.swift */; };
+		331D440B233322E000DC14A0 /* TrackTableCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D440A233322E000DC14A0 /* TrackTableCellTwo.swift */; };
+		331D440F2333248400DC14A0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D440E2333248400DC14A0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		331D44022330E65700DC14A0 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		331D44042332F61A00DC14A0 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CacheManager.swift; path = Service/CacheManager.swift; sourceTree = SOURCE_ROOT; };
 		331D440623330A7400DC14A0 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		331D44082333225100DC14A0 /* TrackTableCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableCellOne.swift; sourceTree = "<group>"; };
+		331D440A233322E000DC14A0 /* TrackTableCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableCellTwo.swift; sourceTree = "<group>"; };
+		331D440E2333248400DC14A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 				331D43C22330AEC800DC14A0 /* MainViewController.swift */,
 				331D43EA2330B1A000DC14A0 /* ListViewController.swift */,
 				331D43EC2330B1C700DC14A0 /* GridViewController.swift */,
+				331D440E2333248400DC14A0 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -169,6 +176,8 @@
 				331D43F22330B58B00DC14A0 /* AlbumTableCell.swift */,
 				331D43F32330B58B00DC14A0 /* AlbumTableCell.xib */,
 				331D43EE2330B23900DC14A0 /* AlbumCollectionCell.swift */,
+				331D44082333225100DC14A0 /* TrackTableCellOne.swift */,
+				331D440A233322E000DC14A0 /* TrackTableCellTwo.swift */,
 				331D43CA2330AEC900DC14A0 /* Assets.xcassets */,
 			);
 			path = View;
@@ -294,13 +303,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				331D44052332F61A00DC14A0 /* CacheManager.swift in Sources */,
+				331D440F2333248400DC14A0 /* DetailViewController.swift in Sources */,
 				331D43C32330AEC800DC14A0 /* MainViewController.swift in Sources */,
 				331D43ED2330B1C700DC14A0 /* GridViewController.swift in Sources */,
+				331D44092333225100DC14A0 /* TrackTableCellOne.swift in Sources */,
 				331D44032330E65700DC14A0 /* Notification+Extension.swift in Sources */,
 				331D43FD2330D1FD00DC14A0 /* ItunesAPI.swift in Sources */,
 				331D43FF2330E43400DC14A0 /* ViewModel.swift in Sources */,
 				331D43C12330AEC800DC14A0 /* AppDelegate.swift in Sources */,
 				331D43F92330BA3100DC14A0 /* ItunesService.swift in Sources */,
+				331D440B233322E000DC14A0 /* TrackTableCellTwo.swift in Sources */,
 				331D43F42330B58B00DC14A0 /* AlbumTableCell.swift in Sources */,
 				331D43EB2330B1A000DC14A0 /* ListViewController.swift in Sources */,
 				331D43C92330AEC800DC14A0 /* Practice_iTunesApp.xcdatamodeld in Sources */,
