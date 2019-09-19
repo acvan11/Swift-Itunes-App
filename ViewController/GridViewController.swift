@@ -61,12 +61,12 @@ extension GridViewController: UICollectionViewDataSource {
 
 extension GridViewController: UICollectionViewDelegateFlowLayout {
     
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = view.frame.width / 3
-        let height = view.frame.height / 6
-        return CGSize(width: width, height: height)
-    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let width = view.frame.width / 3
+//        let height = view.frame.height / 4
+//        return CGSize(width: width, height: height)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         

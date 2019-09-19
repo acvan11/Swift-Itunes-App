@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6C-nj-YTq">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6C-nj-YTq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
                                     <segue destination="ee2-QW-LKm" kind="embed" id="9HQ-Iq-nAa"/>
                                 </connections>
                             </containerView>
-                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-EI-Rr6">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-EI-Rr6">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
                                     <segue destination="DUj-58-4BQ" kind="embed" id="8nk-Pe-IJs"/>
@@ -90,40 +90,40 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7q4-rZ-W8z">
-                                    <size key="itemSize" width="114" height="124"/>
+                                    <size key="itemSize" width="95" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCollectionCell" id="9AK-LI-gOX" customClass="AlbumCollectionCell" customModule="Practice_iTunesApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="114" height="124"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="114" height="124"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="95" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a really really long long long title book" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F31-x4-4hk">
-                                                    <rect key="frame" x="10" y="93" width="94" height="31.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a really really long long long title book" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F31-x4-4hk">
+                                                    <rect key="frame" x="5" y="93.5" width="85" height="31.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fun-ka-7yp">
-                                                    <rect key="frame" x="20" y="8" width="74" height="80"/>
+                                                    <rect key="frame" x="5" y="5" width="85.5" height="83.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="Bvz-Fk-1Hn"/>
+                                                        <constraint firstAttribute="width" secondItem="Fun-ka-7yp" secondAttribute="height" multiplier="85:83" id="ur3-UM-gUt"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="F31-x4-4hk" firstAttribute="top" secondItem="Fun-ka-7yp" secondAttribute="bottom" constant="5" id="3v9-GJ-UcJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="Fun-ka-7yp" secondAttribute="trailing" constant="20" id="NF0-g0-Lis"/>
-                                            <constraint firstItem="Fun-ka-7yp" firstAttribute="leading" secondItem="9AK-LI-gOX" secondAttribute="leading" constant="20" id="Vcj-AL-d7J"/>
-                                            <constraint firstAttribute="trailing" secondItem="F31-x4-4hk" secondAttribute="trailing" constant="10" id="ang-Bj-J3d"/>
-                                            <constraint firstItem="F31-x4-4hk" firstAttribute="leading" secondItem="9AK-LI-gOX" secondAttribute="leading" constant="10" id="oGO-zh-4Vh"/>
-                                            <constraint firstItem="Fun-ka-7yp" firstAttribute="top" secondItem="9AK-LI-gOX" secondAttribute="top" constant="8" id="tte-xF-iMp"/>
+                                            <constraint firstItem="F31-x4-4hk" firstAttribute="leading" secondItem="9AK-LI-gOX" secondAttribute="leading" constant="5" id="8sl-2E-pxR"/>
+                                            <constraint firstAttribute="bottom" secondItem="F31-x4-4hk" secondAttribute="bottom" constant="5" id="Byd-UW-119"/>
+                                            <constraint firstItem="Fun-ka-7yp" firstAttribute="leading" secondItem="9AK-LI-gOX" secondAttribute="leading" constant="5" id="bwH-6y-oR1"/>
+                                            <constraint firstAttribute="trailing" secondItem="F31-x4-4hk" secondAttribute="trailing" constant="5" id="hdA-jN-rrU"/>
+                                            <constraint firstItem="Fun-ka-7yp" firstAttribute="top" secondItem="9AK-LI-gOX" secondAttribute="top" constant="5" id="vDn-FE-vg8"/>
+                                            <constraint firstItem="F31-x4-4hk" firstAttribute="top" secondItem="Fun-ka-7yp" secondAttribute="bottom" constant="5" id="yiW-cA-A0c"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="albumImage" destination="Fun-ka-7yp" id="AEU-iW-ZTE"/>

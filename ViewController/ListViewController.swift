@@ -28,6 +28,10 @@ class ListViewController: UIViewController {
         //you must register XIB to table view
         listTableView.register(UINib(nibName: AlbumTableCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: AlbumTableCell.identifier)
         
+        // what's for???
+        // remove extra unused cells
+        listTableView.tableFooterView = UIView(frame: .zero)
+        
         NotificationCenter.default.addObserver(forName: Notification.Name.AlbumNotification, object: nil, queue: .main){ note in
             guard let userInfo = note.userInfo as? [String:ViewModel] else { return }
             

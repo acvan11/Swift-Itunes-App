@@ -24,6 +24,7 @@
 		331D43FD2330D1FD00DC14A0 /* ItunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */; };
 		331D43FF2330E43400DC14A0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D43FE2330E43400DC14A0 /* ViewModel.swift */; };
 		331D44032330E65700DC14A0 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D44022330E65700DC14A0 /* Notification+Extension.swift */; };
+		331D44052332F61A00DC14A0 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D44042332F61A00DC14A0 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesAPI.swift; sourceTree = "<group>"; };
 		331D43FE2330E43400DC14A0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		331D44022330E65700DC14A0 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		331D44042332F61A00DC14A0 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CacheManager.swift; path = Service/CacheManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		331D43E42330B0D400DC14A0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				331D44042332F61A00DC14A0 /* CacheManager.swift */,
 				331D43F82330BA3100DC14A0 /* ItunesService.swift */,
 				331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */,
 			);
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331D44052332F61A00DC14A0 /* CacheManager.swift in Sources */,
 				331D43C32330AEC800DC14A0 /* MainViewController.swift in Sources */,
 				331D43ED2330B1C700DC14A0 /* GridViewController.swift in Sources */,
 				331D44032330E65700DC14A0 /* Notification+Extension.swift in Sources */,

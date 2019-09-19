@@ -22,8 +22,15 @@ class AlbumTableCell: UITableViewCell {
             albumSubLabel.text = album.artist
             album.getImage{ [weak self] img in
                 self?.albumImage.image = img
+//                print("Made URL Request")
             }
         }
+    }
+    
+    // what's for for this function???
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        albumImage.image = nil
     }
 }
 
