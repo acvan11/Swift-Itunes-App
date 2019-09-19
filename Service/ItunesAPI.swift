@@ -9,20 +9,35 @@
 import Foundation
 
 struct ItunesAPI {
+    //https://itunes.apple.com/lookup?id=1437591818&entity=song -> Song
+    //https://itunes.apple.com/search?term=jack+johnson&entity=album -> Album
     
-    //https://itunes.apple.com/search?term=jack+johnson&entity=album
     var search: String!
+    var album: Album!
     
     init(search: String) {
         self.search = search
     }
+    
+    init(album: Album) {
+        self.album = album
+    }
 
     
-    let base = "https://itunes.apple.com/search?term="
-    let album = "&entity=album"
+    let base = "https://itunes.apple.com/"
     
-    var getUrl: URL? {
-        return URL(string: base + search + album)
+    let lookup = "lookup?id="
+    let songEntity = "&entity=song"
+    
+    let term = "search?term="
+    let albumEntity = "&entity=album"
+    
+    var getAlbumUrl: URL? {
+        return URL(string: base + term + search + albumEntity)
+    }
+    
+    var getTrachUrl: URL? {
+        return URL(string: base + lookup + "\(album.id)" + songEntity)
     }
     
 }
