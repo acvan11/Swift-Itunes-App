@@ -36,10 +36,13 @@ extension DetailViewController: UITableViewDataSource {
        
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: TrackTableCellOne.identifier, for: indexPath) as! TrackTableCellOne
+            cell.album = viewModel.currentAlbum
             return cell
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: TrackTableCellTwo.identifier, for: indexPath) as! TrackTableCellTwo
+            let track = viewModel.tracks[indexPath.row]
+            cell.track = track
             return cell
         }
     }

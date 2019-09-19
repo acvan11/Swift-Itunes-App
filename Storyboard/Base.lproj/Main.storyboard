@@ -151,35 +151,34 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlk-Ob-bMM">
-                                                    <rect key="frame" x="324" y="10" width="36" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="dUg-Ii-1t6"/>
-                                                    </constraints>
-                                                    <state key="normal" title="$1.19"/>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 mins 42 secs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evi-YV-2CX">
                                                     <rect key="frame" x="10" y="39" width="116" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l8-Kl-BTg">
+                                                    <rect key="frame" x="326.5" y="10" width="38.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Zlk-Ob-bMM" firstAttribute="top" secondItem="tNF-ip-VFS" secondAttribute="top" constant="10" id="6Wh-3r-LFF"/>
                                                 <constraint firstItem="8iz-6x-o0f" firstAttribute="top" secondItem="tNF-ip-VFS" secondAttribute="top" constant="10" id="Cpx-sJ-81A"/>
                                                 <constraint firstItem="8iz-6x-o0f" firstAttribute="leading" secondItem="tNF-ip-VFS" secondAttribute="leading" constant="10" id="ECE-s3-BR4"/>
                                                 <constraint firstItem="evi-YV-2CX" firstAttribute="leading" secondItem="tNF-ip-VFS" secondAttribute="leading" constant="10" id="LSe-5b-R5Q"/>
-                                                <constraint firstAttribute="trailing" secondItem="Zlk-Ob-bMM" secondAttribute="trailing" constant="15" id="ZZ3-Hc-8EG"/>
+                                                <constraint firstItem="3l8-Kl-BTg" firstAttribute="top" secondItem="tNF-ip-VFS" secondAttribute="top" constant="10" id="LsW-F6-4mN"/>
+                                                <constraint firstAttribute="trailing" secondItem="3l8-Kl-BTg" secondAttribute="trailing" constant="10" id="f0K-fr-Q90"/>
                                                 <constraint firstItem="evi-YV-2CX" firstAttribute="top" secondItem="8iz-6x-o0f" secondAttribute="bottom" constant="8" id="fnU-MU-9mq"/>
-                                                <constraint firstItem="Zlk-Ob-bMM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8iz-6x-o0f" secondAttribute="trailing" constant="5" id="o1X-Mp-H1S"/>
+                                                <constraint firstItem="3l8-Kl-BTg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8iz-6x-o0f" secondAttribute="trailing" constant="20" id="gyv-c4-A47"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="evi-YV-2CX" secondAttribute="trailing" constant="50" id="rus-ri-goK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="trackDuration" destination="evi-YV-2CX" id="oJj-UP-0YB"/>
                                             <outlet property="trackName" destination="8iz-6x-o0f" id="f2P-BQ-9rb"/>
-                                            <outlet property="trackPrice" destination="Zlk-Ob-bMM" id="RtQ-Fs-L13"/>
+                                            <outlet property="trackPrice" destination="3l8-Kl-BTg" id="yKN-oG-bk8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
