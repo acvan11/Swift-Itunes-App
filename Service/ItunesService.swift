@@ -16,7 +16,7 @@ final class ItunesService {
     private init() {}
     
     func getAlbums(for search: String, completion: @escaping AlbumHandler) {
-        guard let url = ItunesAPI(search: search).getUrl else {
+        guard let url = ItunesAPI(search: search).getAlbumUrl else {
             completion([])
             return
         }

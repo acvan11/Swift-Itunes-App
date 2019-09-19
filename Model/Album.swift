@@ -17,6 +17,7 @@ struct AlbumResponse: Decodable {
 
 class Album: Decodable {
     let artist: String
+    let id: Int
     let image: String
     let title: String
     let price: Double?
@@ -28,6 +29,7 @@ class Album: Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case artist = "artistName"
+        case id = "collectionId"
         case image = "artworkUrl100"
         case title = "collectionName"
         case price = "collectionPrice"
