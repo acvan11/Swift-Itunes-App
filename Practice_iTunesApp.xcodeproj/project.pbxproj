@@ -29,6 +29,7 @@
 		331D44092333225100DC14A0 /* TrackTableCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D44082333225100DC14A0 /* TrackTableCellOne.swift */; };
 		331D440B233322E000DC14A0 /* TrackTableCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D440A233322E000DC14A0 /* TrackTableCellTwo.swift */; };
 		331D440F2333248400DC14A0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D440E2333248400DC14A0 /* DetailViewController.swift */; };
+		331D4411233334EB00DC14A0 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D4410233334EB00DC14A0 /* ViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		331D44082333225100DC14A0 /* TrackTableCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableCellOne.swift; sourceTree = "<group>"; };
 		331D440A233322E000DC14A0 /* TrackTableCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableCellTwo.swift; sourceTree = "<group>"; };
 		331D440E2333248400DC14A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		331D4410233334EB00DC14A0 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +137,9 @@
 		331D43E42330B0D400DC14A0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				331D44042332F61A00DC14A0 /* CacheManager.swift */,
 				331D43F82330BA3100DC14A0 /* ItunesService.swift */,
 				331D43FC2330D1FD00DC14A0 /* ItunesAPI.swift */,
+				331D44042332F61A00DC14A0 /* CacheManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				331D44022330E65700DC14A0 /* Notification+Extension.swift */,
+				331D4410233334EB00DC14A0 /* ViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				331D43F42330B58B00DC14A0 /* AlbumTableCell.swift in Sources */,
 				331D43EB2330B1A000DC14A0 /* ListViewController.swift in Sources */,
 				331D43C92330AEC800DC14A0 /* Practice_iTunesApp.xcdatamodeld in Sources */,
+				331D4411233334EB00DC14A0 /* ViewController+Extension.swift in Sources */,
 				331D43EF2330B23900DC14A0 /* AlbumCollectionCell.swift in Sources */,
 				331D43F72330B8B600DC14A0 /* Album.swift in Sources */,
 				331D440723330A7400DC14A0 /* Track.swift in Sources */,

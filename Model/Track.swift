@@ -8,13 +8,17 @@
 
 import Foundation
 
+struct TrackResponse: Decodable {
+    let results: [Track]
+}
+
 class Track: Decodable {
-    let name: String
-    let url: String
+    let name: String?
+    let url: String?
     let image: String
-    let price: Double
+    let price: Double?
     let releaseDate: String
-    let duration: Int
+    let duration: Int?
     
     private enum CodingKeys: String, CodingKey {
         case name = "trackName"

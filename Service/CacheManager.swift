@@ -22,7 +22,7 @@ final class CacheManager {
         //1. Check if the cache has the data
         if let data = cache.object(forKey: endpoint as NSString) {
             completion(data as Data)
-            print("Retrieved From Cache")
+//            print("Retrieved From Cache")
             return
         }
         
@@ -48,7 +48,7 @@ final class CacheManager {
                 DispatchQueue.main.async {
                     //back to main thread to pass completion
                     completion(data)
-                    print("Make API request")
+//                    print("Make API request")
                 }
     
             }

@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol TrackDelegate: class {
+    func update()
+}
+
 class ViewModel {
     
     /*ViewModel - main goal is to only allow the view controller to worry about the views
@@ -17,6 +21,8 @@ class ViewModel {
      4. Data Binding - connecting a view to a data source - Property Observer & Communication Pattern
     */
     
+    weak var delegate: TrackDelegate?
+    
     var albums = [Album]() {
         didSet {
             let userInfo: [String:ViewModel] = ["ViewModel":self]
@@ -25,9 +31,19 @@ class ViewModel {
         }
     }
     
-    var tracks = [Track]()
+    var tracks = [Track]() {
+        didSet {
+            delegate?.update()
+        }
+    }
     
-    var currentAlbum: Album!
+    var currentAlbum: Album! {
+        didSet {
+            ItunesService.shared.getTracks(for: currentAlbum) { [unowned self] trks in
+                self.tracks = trks
+            }
+        }
+    }
     
     func get(search: String) {
         

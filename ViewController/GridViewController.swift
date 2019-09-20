@@ -69,6 +69,8 @@ extension GridViewController: UICollectionViewDelegateFlowLayout {
 //    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let album = viewModel.albums[indexPath.row]
+        viewModel.currentAlbum = album
+        goToDetail(with: viewModel)
     }
 }

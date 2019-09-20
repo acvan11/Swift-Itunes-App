@@ -9,6 +9,7 @@
 import Foundation
 
 typealias AlbumHandler = ([Album]) -> Void
+typealias TrackHandler = ([Track]) -> Void
 
 final class ItunesService {
     
@@ -33,8 +34,8 @@ final class ItunesService {
                 do {
                     let albumResponse = try JSONDecoder().decode(AlbumResponse.self, from: data)
                     let albums = albumResponse.albums
-                    print("okay")
-                    print(albums)
+//                    print("okay")
+//                    print(albums)
                     completion(albums)
                 } catch let myError {
                     print("Couldn't Decode Album: \(myError.localizedDescription)")
@@ -42,6 +43,35 @@ final class ItunesService {
                     return
                 }
             }
-        }.resume()
+            }.resume()
+    }
+    
+    func getTracks(for album: Album, completion: @escaping TrackHandler) {
+        
+        guard let url = ItunesAPI(album: album).getTrachUrl else {
+            completion([])
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (dat, _, err) in
+            if let error = err {
+                print("Bad Task: \(error.localizedDescription)")
+                completion([])
+                return
+            }
+            
+            if let data = dat {
+                do {
+                    let trackResponse = try JSONDecoder().decode(TrackResponse.self, from: data)
+                    let tracks = Array(trackResponse.results.dropFirst())
+                    completion(tracks)
+                } catch {
+                    print("Couldn't Decode track: \(error.localizedDescription)")
+                    completion([])
+                    return
+                }
+            }
+            
+            }.resume()
     }
 }

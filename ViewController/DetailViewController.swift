@@ -16,11 +16,16 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDetail()
     }
     
+    private func setupDetail() {
+        viewModel.delegate = self
+    }
 
 }
 
+//MARK: TableView
 extension DetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,5 +56,15 @@ extension DetailViewController: UITableViewDataSource {
 extension DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+//    return 130
+    }
+}
+
+//MARK: TrackDelegate
+extension DetailViewController: TrackDelegate {
+    func update() {
+        DispatchQueue.main.async {
+            self.detailTableView.reloadData()
+        }
     }
 }

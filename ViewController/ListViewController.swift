@@ -66,5 +66,9 @@ extension ListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let album = viewModel.albums[indexPath.row]
+        viewModel.currentAlbum = album
+        goToDetail(with: viewModel)
+        
     }
 }
